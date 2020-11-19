@@ -1,0 +1,219 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Nuestros sabores | Helados y Sorbetes Biotrap{% endblock title %}
+{% block description%}{% endblock description %}
+
+<!--
+  Metadatos para Twitter
+-->
+{% block twitterimage %}/static/core/img/natural-strawberry.jpg{% endblock twitterimage %}
+{% block twittertitle %}Nuestros sabores | Helados y Sorbetes Biotrap{%endblock twittertitle %}
+{% block twitterdescription %}{% endblock twitterdescription %}
+
+{% block preload %}<!-- Preload css -->
+  <link rel="preload" as="style" href="{% static 'core/css/flavors.css' %}" />{% endblock preload %}
+
+{% block css %}<!-- Estilos css -->
+  <link rel="stylesheet" href="{% static 'core/css/flavors.css' %}" />{% endblock css %}
+
+{% block content %}
+    <!-- Wrapper Header Sabores -->
+    <div class="wrapper-flavors">
+      <div class="grid-flavors">
+        <!-- logo -->
+        <a href="{% url 'home' %}" class="logo"></a>
+        <!-- content-text -->
+        <div class="header-flavors-text">
+          <header>
+            <h1 class="anim1">Nuestros sabores</h1>
+            <h2 class="anim1">Estos son los sabores actualmente disponibles.</h2>
+          </header>
+        </div>
+      </div>
+    </div>{% endblock content %}
+
+{% block main %}
+<!-- Presentación sabores -->
+<section class="flavors-presentation">
+  <div class="flavors-presentation--content">
+    <p>
+      <span class="tab">Presentamos</span> la gama de sabores de HELADOS BIO, elaborados con base de bebida de
+      avena, de fabricación propia.
+    </p>
+    <p>Los <strong>SORBETES BIO</strong> están fabricados con base de agua.</p>
+    <p>
+      <span class="tab">Fabricamos</span> un helado artesanal y totalmente natural, pues no utilizamos conservantes
+      ni colorantes.
+    </p>
+    <p>
+      <span class="tab">La</span> unión entre el proceso artesano de fabricación y los productos empleados conceden a nuestros
+      <strong>HELADOS Y SORBETES</strong> la categoría <strong>PREMIUM.</strong>
+    </p>
+    <p>
+      <span class="tab">La</span> gama de sabores que ofrecemos abarca desde los Sorbetes de frutas (limón, fresa, coco….)
+      hasta los Helados elaborados con bebida de avena (chocolate, canela, café-maca….).
+    </p>
+    <p><span class="tab">Formatos</span> disponibles:</p>
+    <ul>
+      <li>
+        <p>
+          Tarrina de 500ml en envase de cartón con tapa del mismo material, ambos apto uso alimentario, envoltorio con
+          faja de cartón corporativa.
+        </p>
+      </li>
+      <li>
+        <p>
+          Basqueta de 2500ml de material plástico con tapa transparente, ambos materiales  aptos para uso alimentario.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Sorbets -->
+<section class="sorbets--flavors">
+  <div class="wrapper-sorbets-flavors">
+    <header>
+      <h1 class="centered uppercase green-gradient-text biotrap-font">sorbetes</h1>
+    </header>
+
+    <!-- lemon -->
+    <div class="sorbet--lemon-flavor">
+      <header>
+        <h2 class="uppercase" id="sorbete-limon">limón</h2>
+      </header>
+
+      <div class="sorbet--lemon-flavor-gallery">
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/sabores/IMG-20200520-WA0015.jpg' %}" alt="sorbete limón">
+        </div>
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/sabores/IMG-20200520-WA0017.jpg' %}" alt="sorbete limón">
+        </div>
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/copas/sorbete_limon.jpg' %}" alt="sorbete limón">
+        </div>
+      </div>
+    </div>
+
+    <!-- strawberry -->
+    <div class="sorbet--strawberry-flavor">
+      <header>
+        <h2 class="uppercase" id="sorbete-fresa">fresa</h2>
+      </header>
+
+      <div class="sorbet--strawberry-flavor-gallery">
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/sabores/IMG-20200520-WA0009.jpg' %}" alt="sorbete fresa">
+        </div>
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/sabores/IMG-20200520-WA0013.jpg' %}" alt="sorbete fresa">
+        </div>
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/copas/copa_fresa.jpg' %}" alt="sorbete fresa">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ice-creams -->
+<section class="ice-creams--flavors">
+  <div class="wrapper-ice-creams-flavors">
+    <header>
+      <h1 class="centered uppercase green-gradient-text biotrap-font">helados</h1>
+    </header>
+
+    <!-- chocolate -->
+    <div class="ice-cream--chocolate-flavor">
+      <header>
+        <h2 class="uppercase" id="helado-chocolate">chocolate</h2>
+      </header>
+
+      <div class="ice-cream--chocolate-flavor-gallery">
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/sabores/chocolate.png' %}" alt="helado
+          chocolate">
+        </div>
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/copas/copa_chocolate.jpg' %}" alt="helado
+          chocolate">
+        </div>
+        <!--
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/copas/sorbete_limon.jpg' %}" alt="helado chocolate">
+        </div>
+        -->
+      </div>
+    </div>
+
+    <!-- coco -->
+    <div class="ice-cream--coconut-flavor">
+      <header>
+        <h2 class="uppercase" id="helado-coco">coco</h2>
+      </header>
+
+      <div class="ice-cream--coconut-flavor-gallery">
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/copas/sorbete_coco.png' %}" alt="helado coco">
+        </div>
+        <!--
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/sabores/IMG-20200520-WA0013.jpg' %}" alt="helado coco">
+        </div>
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/copas/copa_fresa.jpg' %}" alt="helado coco">
+        </div>
+        -->
+      </div>
+    </div>
+
+    <!-- café maca -->
+    <div class="ice-cream--cafe-maca-flavor">
+      <header>
+        <h2 class="uppercase" id="helado-cafe-maca">café maca</h2>
+      </header>
+
+      <div class="ice-cream--cafe-maca-flavor-gallery">
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/sabores/helado_cafe_maca.png' %}" alt="helado café
+          maca">
+        </div>
+        <!--
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/sabores/IMG-20200520-WA0013.jpg' %}" alt="helado café
+          maca">
+        </div>
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/copas/copa_fresa.jpg' %}" alt="helado café maca">
+        </div>
+        -->
+      </div>
+    </div>
+
+    <!-- canela -->
+    <div class="ice-cream--cinnamon-flavor">
+      <header>
+        <h2 class="uppercase" id="helado-canela">canela</h2>
+      </header>
+
+      <div class="ice-cream--cinnamon-flavor-gallery">
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/sabores/canela.png' %}" alt="helado canela">
+        </div>
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/copas/copa_canela.jpg' %}" alt="helado canela">
+        </div>
+        <!--
+        <div>
+          <img class="lightbox" src="{% static 'core/img/biotrap/copas/copa_fresa.jpg' %}" alt="helado canela">
+        </div>
+        -->
+      </div>
+    </div>
+  </div>
+</section>{% endblock main %}
+
+{% block scrollmagic %}<script src="{% static 'core/js/ScrollMagic.min.js' %}"></script>{% endblock scrollmagic %}
+{% block animation %}<script src="{% static 'core/js/contact/contact.js' %}"></script>{% endblock animation %}

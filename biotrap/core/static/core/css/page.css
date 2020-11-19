@@ -1,0 +1,47 @@
+.grid-page {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 90%;
+}
+.logo {
+  background-image: url(../img/Biotrap-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+  justify-self: flex-start;
+  height: 80px;
+  width: 100px;
+  margin-bottom: 1.5rem;
+}
+.header-page-text {
+  grid-column: auto;
+  grid-row: auto;
+  width: 90%;
+}
+
+.header-page-text h1 {
+  font-family: "Biotrap", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-content {
+  background-color: whitesmoke;
+  border-radius: 8px;
+  color: var(--color-bg);
+  margin: 70px auto 0;
+  max-width: 1248px;
+  padding: 30px;
+  width: 83%;
+}
+
+/* Media queries */
+@media only screen and (min-width: 822px) {
+  .header-page-text {
+    width: 70%;
+  }
+}

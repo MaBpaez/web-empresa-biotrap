@@ -1,0 +1,397 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Inicio | Helados y Sorbetes Biotrap{% endblock title %}
+{% block description%}{% endblock description %}
+
+<!--
+  Metadatos para Twitter
+-->
+{% block twitterimage %}/static/core/img/frutas/frutas.png{% endblock twitterimage %}
+{% block twittertitle %}Inicio | Helados y Sorbetes Biotrap{%endblock twittertitle %}
+{% block twitterdescription %}{% endblock twitterdescription %}
+
+{% block preload %}<!-- Preload css -->
+  <link rel="preload" as="style" href="{% static 'core/css/home.css' %}" />{% endblock preload %}
+
+{% block css %}<!-- Estilos css -->
+  <link rel="stylesheet" href="{% static 'core/css/home.css' %}" />{% endblock css %}
+
+{% block content %}
+   <!-- Medium Header -->
+    <div class="medium-header">
+      <!-- Logo -->
+      <a href="{% url 'home' %}" class="medium-header-logo anim1"></a>
+
+      <!-- Titulo o slogan -->
+      <div class="medium-header-title">
+        <header>
+          <h1 class="anim1"><span class="green-gradient-text">El mejor helado</span></h1>
+        </header>
+      </div>
+
+      <!-- Contenido -->
+      <header class="medium-header-content">
+        <div>
+          <h2 class="anim1">Helado ecológico y vegano</h2>
+          <p class="anim1">
+            En <span class="biotrap-font"><strong>Biotrap</strong></span> somos fabricantes de
+            SORBETES y HELADOS ecológicos certificados por el Organismo de control CAAE. Nuestro proceso de fabriación
+            es totalmente artesanal, seleccionando ingredientes bajo estándares de alta calidad y todos ellos de origen
+            vegetal, sin gluten y sin lactosa.
+          </p>
+          <p class="anim1">
+            No están pasteurizados, por lo que conservan la frescura y las propiedades de la fruta, incluidos sus
+            probióticos naturalmente presentes. Como resultado obtenemos un producto apto para una gran variedad de
+            consumidores, ya que cumple un amplio espectro de intolerancias alimentarias: <span>sin gluten, sin
+            lactosa(aecosan &lt;0.01%), sin huevo</span>. Avalado por analíticas de control de laboratorio acreditado en
+            la norma UNE 17025.
+          </p>
+          <a href="{% url 'about' %}"><button class="button-info anim1">Más información</button></a>
+        </div>
+      </header>
+
+      <!-- Imagen helado -->
+      <div class="medium-header-image anim1"></div>
+
+      <!-- Certificados -->
+      <div class="medium-header-certificates">
+        <div class="ifs anim1"></div>
+        <div class="caae anim1"></div>
+        <div class="lactosa-free anim1"></div>
+        <div class="gluten-free anim1"></div>
+        <div class="vegano anim1"></div>
+      </div>
+    </div>{% endblock content %}
+
+    {% block main %}
+    <main>
+      <!-- Presentación -->
+      <section class="wrapper-presentation">
+        <!-- Top -->
+        <div class="top-presentation">
+          <div class="text-logo"></div>
+          <div class="bio-quote">
+            <p>
+              <q>Nuestros helados nacen de nuestros propios productos 100% sólo pulpa de fruta ecológica.</q>
+            </p>
+          </div>
+        </div>
+
+        <!-- Medium -->
+        <div class="medium-presentation">
+          <!-- Header-contacto -->
+          <div class="title-contact-medium-presentation">
+            <header><h2 class="green-gradient-text biotrap-font">Contacto</h2></header>
+          </div>
+
+          <!-- Contenido -->
+          <div class="medium-presentation-content">
+            <p>
+              <span class="biotrap-font"><strong>Biotrap</strong></span> es una empresa ubicada en
+              Vélez-Málaga (Málaga) especializada en la elaboración de helado artesanal y sorbetes ecológicos, veganos,
+              sin lactosa y sin gluten, todos ellos con sus certificados de calidad.
+            </p>
+            <p>
+              Para más información contacte con nosotros a través del teléfono que aparece en la web o rellenando el
+              siguiente formulario, le atenderemos gustosamente.
+            </p>
+          </div>
+
+          <!-- Formulario -->
+          <div class="form-contact-medium-presentation">
+            <form action="" method="POST" class="contact-presentation">
+              {% csrf_token %}
+              <div class="name">
+                {{ form.nombre.errors }}
+                <label for="{{ form.nombre.id_for_label }}">Nombre</label>
+                {{ form.nombre }}
+              </div>
+
+              <div class="phone">
+                {{ form.telefono.errors }}
+                <label for="{{ form.telefono.id_for_label }}">Teléfono</label>
+                {{ form.telefono }}
+              </div>
+
+              <div class="email">
+                {{ form.correo.errors }}
+                <label for="{{ form.correos.id_for_label }}">Email</label>
+                {{ form.correo }}
+              </div>
+
+              <div class="asunto">
+                {{ form.asunto.errors }}
+                <label for="{{ form.asunto.id_for_label }}">Asunto</label>
+                {{ form.asunto }}
+              </div>
+
+              <div class="mensaje">
+                {{ form.mensaje.errors }}
+                <label for="{{ form.mensaje.id_for_label }}">Mensaje</label>
+                {{ form.mensaje }}
+              </div>
+
+              {% load pages_extras %}
+              {% get_page_privacy as page %}
+              <div class="privacidad">
+                {{ form.politica.erros }}
+                {{ form.politica }}
+                <label for="{{ form.politica.id_for_label }}">
+                  <a href="{% url 'pagina:page' page.id page.title|slugify %}">Aceptar política privacidad</a>
+                </label>
+              </div>
+
+              <div class="enviar">
+                <button class="button-info"><input type="submit" value="Enviar" /></button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Imágenes -->
+          <div class="bg-image">
+            <!-- Mango -->
+            <div class="mango animate"></div>
+            <!-- Menta -->
+            <!--<div class="mint"></div>-->
+            <!-- Mora -->
+            <div class="grape animate"></div>
+            <!-- Gotas -->
+            <!--<div class="drop"></div>-->
+          </div>
+        </div>
+      </section>
+
+      <!-- Parallax -->
+      <!--
+      <div id="parallax1" class="parallaxParent">
+        <div class="parallax-image"></div>
+      </div>-->
+      <div class="parallax-biotrap"></div>
+
+      <!-- Propiedades del helado ecológico -->
+      <section>
+        <div class="wrapper-benefits">
+          <article class="benefits">
+            <header class="benefits-title">
+              <h2 class="biotrap-font"><span class="green-gradient-text">propiedades del helado ecológico</span></h2>
+            </header>
+            <div class="benefits-list">
+              <ul>
+                <li><p>Ingredientes ecológicos certificados.</p></li>
+                <li><p>Materias primas naturales.</p></li>
+                <li><p>Sin conservantes, aromatizantes ni colorantes artificiales.</p></li>
+                <li><p>Sabores más auténticos.</p></li>
+                <li><p>Sin ingredientes de origen animal.</p></li>
+                <li><p>Realizados artesanalmente.</p></li>
+                <li><p>Perfecto para los niños.</p></li>
+                <li><p>Podemos consumirlos durante todo el año.</p></li>
+                <li><p>Sin alérgenos.</p></li>
+                <li><p>Apto para todo tipo de intolerantes.</p></li>
+              </ul>
+            </div>
+            <div class="benefits-image"></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Galería de helados y sorbetes -->
+      <section class="wrapper-ice-cream">
+        <!-- Titular de sabores -->
+        <div class="headline">
+          <header>
+            <h1 class="biotrap-font"><span class="green-gradient-text">Biotrap sabores</span></h1>
+          </header>
+        </div>
+
+        <!-- Sorbetes y Helados -->
+        <div class="wrapper-sorbets-creams">
+          <div class="sorbets">
+            <header>
+              <h2 class="biotrap-font">Sorbetes</h2>
+            </header>
+            <hr>
+
+            <div class="sorbets-image">
+              <div class="lemon-sorbet">
+                <a href="{% url 'flavors' %}#sorbete-limon">
+                  <img src="{% static 'core/img/biotrap/lemon-sorbet.jpg' %}" alt="sorbete de limón">
+                  <span>limón</span>
+                </a>
+              </div>
+              <div class="strawberry-sorbet">
+                <a href="{% url 'flavors' %}#sorbete-fresa">
+                  <img src="{% static 'core/img/biotrap/strawberry-sorbet.jpg' %}" alt="sorbete de fresa">
+                  <span>fresa</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ice-creams">
+            <header>
+              <h2 class="biotrap-font">Helados</h2>
+            </header>
+            <hr>
+
+            <div class="ice-creams-image">
+              <div class="chocolate-cream">
+                <a href="{% url 'flavors' %}#helado-chocolate">
+                  <img src="{% static 'core/img/biotrap/chocolate-ice-cream.png' %}" alt="helado chocolate">
+                  <span>chocolate</span>
+                </a>
+              </div>
+              <div class="coconut-cream">
+                <a href="{% url 'flavors' %}#helado-coco">
+                  <img src="{% static 'core/img/biotrap/coconut-ice-cream.jpg' %}" alt="helado coco">
+                  <span>coco</span>
+                </a>
+              </div>
+              <div class="coffee-cream">
+                <a href="{% url 'flavors' %}#helado-cafe-maca">
+                  <img src="{% static 'core/img/biotrap/coffee-ice-cream.jpg' %}" alt="helado café maca">
+                  <span>café maca</span>
+                </a>
+              </div>
+              <div class="cinnamon-cream">
+                <a href="{% url 'flavors' %}#helado-canela">
+                  <img src="{% static 'core/img/biotrap/cinnamon-ice-cream.png' %}" alt="helado canela">
+                  <span>canela</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grid helados y sorbetes -->
+        <div class="headline">
+          <header>
+            <h1 class="biotrap-font"><span class="green-gradient-text">Galería</span></h1>
+          </header>
+        </div>
+
+        <div class="ice-cream-gallery">
+          <div class="item-ice-cream-gallery">
+            <img class="lightbox" src="{% static 'core/img/biotrap/ambiente/IMG_0888.jpg' %}" alt="Biotrap helado" />
+          </div>
+          <div class="item-ice-cream-gallery">
+            <img class="lightbox" src="{% static 'core/img/biotrap/ambiente/IMG_0912.png' %}" alt="Biotrap helado" />
+            <div class="flavor-name">
+              <header><h3>chocolate</h3></header>
+            </div>
+          </div>
+          <div class="item-ice-cream-gallery">
+            <img class="lightbox" src="{% static 'core/img/biotrap/ambiente/IMG_0896.jpg' %}" alt="Biotrap sorbete" />
+            <div class="flavor-name">
+              <header><h3>canela</h3></header>
+            </div>
+          </div>
+          <div class="item-ice-cream-gallery">
+            <img class="lightbox" src="{% static 'core/img/biotrap/copas/copa_canela.jpg' %}" alt="Biotrap helado" />
+          </div>
+          <div class="item-ice-cream-gallery">
+            <img class="lightbox" src="{% static 'core/img/biotrap/copas/sorbete_coco.png' %}" alt="Biotrap helado" />
+            <div class="flavor-name">
+              <header><h3>coco</h3></header>
+            </div>
+          </div>
+          <div class="item-ice-cream-gallery">
+            <img class="lightbox" src="{% static 'core/img/biotrap/copas/sorbete_limon.jpg' %}" alt="Biotrap sorbete" />
+            <div class="flavor-name">
+              <header><h3>limón</h3></header>
+            </div>
+          </div>
+          <div class="item-ice-cream-gallery">
+            <img class="lightbox" src="{% static 'core/img/tarrina02.jpg' %}" alt="Biotrap sorbete" />
+            <div class="flavor-name">
+              <!--<header><h3>mango</h3></header>-->
+            </div>
+          </div>
+          <div class="item-ice-cream-gallery">
+            <img class="lightbox" src="{% static 'core/img/biotrap/ambiente/IMG_0916.png' %}" alt="Biotrap helado" />
+          </div>
+          <div class="item-ice-cream-gallery">
+            <img class="lightbox" src="{% static 'core/img/biotrap/copas/copa_chocolate.jpg' %}" alt="Biotrap helado" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Reseñas de clientes -->
+      <section class="wrapper-reviews">
+        <!-- Titular de reseñas clientes -->
+        <div class="headline">
+          <header>
+            <h1 class="biotrap-font"><span class="green-gradient-text">lo que opinan los clientes</span></h1>
+            <div class="subtitle"><h3>No lo decímos nosotros, lo dicen ellos.</h3></div>
+          </header>
+        </div>
+
+        <!-- Opiniones -->
+        <div class="reviews-grid">
+          <!-- opinion 1 -->
+          <div class="item-review">
+            <div class="avatar">
+              <div class="avatar-img"></div>
+              <p>Juan Nadie</p>
+            </div>
+            <div class="content-customer">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, blanditiis!Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Sint, blanditiis!
+              </p>
+            </div>
+          </div>
+          <!-- opinion 2 -->
+          <div class="item-review">
+            <div class="avatar">
+              <div class="avatar-img"></div>
+              <p>Juan Nadie</p>
+            </div>
+            <div class="content-customer">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, blanditiis!Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Sint, blanditiis!
+              </p>
+            </div>
+          </div>
+          <!-- opinion 3 -->
+          <div class="item-review">
+            <div class="avatar">
+              <div class="avatar-img"></div>
+              <p>Juan Nadie</p>
+            </div>
+            <div class="content-customer">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, blanditiis!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Garantías y Certificados -->
+      <section class="wrapper-certificates">
+        <!-- Titular de Biotrap garantías -->
+        <div class="headline">
+          <header>
+            <h1 class="biotrap-font"><span class="green-gradient-text">garantías y certificados</span></h1>
+          </header>
+        </div>
+
+        <!-- Contenido garantías -->
+        <div class="guarantee">
+          <div class="item-guarantee"><img src="{% static 'core/img/gluten-free-bb.svg' %}" alt="Biotrap sin gluten" /></div>
+          <div class="item-guarantee"><img src="{% static 'core/img/lactose-free-b.svg' %}" alt="Biotrap sin lactosa" /></div>
+          <div class="item-guarantee"><img src="{% static 'core/img/vegano.svg' %}" alt="Biotrap vegano" /></div>
+          <div class="item-guarantee"><img src="{% static 'core/img/caae.jpg' %}" alt="Biotrap caae" /></div>
+          <div class="item-guarantee"><img src="{% static 'core/img/diputacion-malaga.png' %}" alt="Biotrap Málaga" /></div>
+          <div class="item-guarantee"><img src="{% static 'core/img/ifs.svg' %}" alt="Biotrap ifs" /></div>
+        </div>
+
+        <!-- Botón más información -->
+        <div class="garantee-info">
+          <a href="#"><button class="button-info">Más información</button></a>
+        </div>
+      </section>
+    </main>{% endblock main %}
+
+    {% block scrollmagic %}<script src="{% static 'core/js/ScrollMagic.min.js' %}"></script>{% endblock scrollmagic %}
+    {% block animation %}<script src="{% static 'core/js/home/home.js' %}"></script>{% endblock animation %}

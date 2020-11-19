@@ -1,0 +1,43 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}{{ page.title }} | Helados y Sorbetes Biotrap{% endblock title %}
+{% block description%}{% endblock description %}
+
+<!--
+  Metadatos para Twitter
+-->
+{% block twitterimage %}/static/core/img/frutas/frutas.png{% endblock twitterimage %}
+{% block twittertitle %}{{ page.title }} | Helados y Sorbetes Biotrap{%endblock twittertitle %}
+{% block twitterdescription %}{% endblock twitterdescription %}
+
+{% block preload %}<!-- Preload css -->
+  <link rel="preload" as="style" href="{% static 'core/css/page.css' %}" />{% endblock preload %}
+
+{% block css %}<!-- Estilos css -->
+  <link rel="stylesheet" href="{% static 'core/css/page.css' %}" />{% endblock css %}
+
+{% block content %}
+  <div class="grid-page">
+    <!-- logo -->
+    <a href="{% url 'home' %}" class="logo"></a>
+
+    <!-- title page -->
+    <div class="header-page-text">
+      <header>
+        <h1>
+          <span class="green-gradient-text">{{ page.title }}</span>
+        </h1>
+      </header>
+    </div>
+  </div>
+{% endblock content %}
+
+{% block main %}
+  <div class="wrapper-page">
+    <div class="page-content">
+      {{ page.content|safe }}
+    </div>
+  </div>{% endblock main %}
+
+{% block scrollmagic %}<script src="{% static 'core/js/ScrollMagic.min.js' %}"></script>{% endblock scrollmagic %}

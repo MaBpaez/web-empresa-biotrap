@@ -1,0 +1,17 @@
+Admin:
+------
+Usuario: biotrap
+password: T8ezVbUrWcDowHnc
+
+Mejoras:
+--------
+Botón fijo en pantalla parte inferior derecha scroll up con transición suave.
+Añadido lightbox a las imágenes.
+Mejorado el diseño responsive.
+Módulo de las redes sociales (para getionarlas)
+Módulo de las diversas páginas (para getionarlas)
+Permanent Links de cada uno de los sabores tanto de sorbetes como de helados.
+
+Observaciones:
+-------------
+Más imágenes del helado de coco y del café maca.

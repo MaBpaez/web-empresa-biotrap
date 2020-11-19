@@ -1,0 +1,239 @@
+/* Helpers */
+
+body {
+  background-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.3), #000), url(../img/biotrap_pattern.svg);
+  /* background-size: cover; */
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.tab {
+  margin-left: 40px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.wrapper-flavors {
+  background-image: url(../img/nuestros-sabores.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  height: 100vh;
+}
+
+.grid-flavors {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 90%;
+}
+
+.logo {
+  background-image: url(../img/Biotrap-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+  justify-self: flex-start;
+  height: 80px;
+  width: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.header-flavors-text {
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.header-flavors-text h1 {
+  color: var(--color-link);
+  margin-bottom: 20px;
+  font-family: "Biotrap", sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.header-flavors-text h2 {
+  color: var(--color-bg);
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+/*** Presentación sabores ***/
+
+.flavors-presentation--content {
+  max-width: 1248px;
+  margin: 70px auto 0;
+  width: 83%;
+}
+
+.flavors-presentation--content > p:nth-child(6) {
+  color: var(--color-title-header);
+}
+
+.flavors-presentation--content ul > li {
+  padding-left: 18px;
+  position: relative;
+}
+
+.flavors-presentation--content ul > li::before {
+  background: linear-gradient(to right, #e1f549, #29d0be);
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 0.66em;
+  left: 0;
+  height: 6px;
+  width: 6px;
+}
+
+.flavors-presentation--content strong {
+  color: var(--color-link);
+}
+
+.sorbets--flavors,
+.ice-creams--flavors {
+  margin-top: 100px;
+}
+
+.wrapper-sorbets-flavors,
+.wrapper-ice-creams-flavors {
+  display: flex;
+  flex-direction: column;
+  max-width: 1248px;
+  margin: 0 auto;
+  width: 83%;
+}
+
+.wrapper-sorbets-flavors header > h1,
+.wrapper-ice-creams-flavors header > h1 {
+  font-size: 3.5rem;
+  margin-bottom: 40px;
+}
+
+.sorbet--lemon-flavor header > h2,
+.sorbet--strawberry-flavor header > h2,
+.ice-cream--chocolate-flavor header > h2,
+.ice-cream--coconut-flavor header > h2,
+.ice-cream--cafe-maca-flavor header > h2,
+.ice-cream--cinnamon-flavor header > h2 {
+  color: var(--color-link);
+  margin-bottom: 40px;
+}
+
+.sorbet--strawberry-flavor header > h2,
+.ice-cream--coconut-flavor header > h2,
+.ice-cream--cafe-maca-flavor header > h2,
+.ice-cream--cinnamon-flavor header > h2 {
+  margin-top: 40px;
+}
+
+.sorbet--lemon-flavor-gallery,
+.sorbet--strawberry-flavor-gallery,
+.ice-cream--chocolate-flavor-gallery,
+.ice-cream--coconut-flavor-gallery,
+.ice-cream--cafe-maca-flavor-gallery,
+.ice-cream--cinnamon-flavor-gallery {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.sorbet--lemon-flavor-gallery > div,
+.sorbet--strawberry-flavor-gallery > div,
+.ice-cream--chocolate-flavor-gallery > div,
+.ice-cream--coconut-flavor-gallery > div,
+.ice-cream--cafe-maca-flavor-gallery > div,
+.ice-cream--cinnamon-flavor-gallery > div {
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.sorbet--lemon-flavor-gallery > div > img,
+.sorbet--strawberry-flavor-gallery > div > img,
+.ice-cream--chocolate-flavor-gallery > div > img,
+.ice-cream--coconut-flavor-gallery > div > img,
+.ice-cream--cafe-maca-flavor-gallery > div > img,
+.ice-cream--cinnamon-flavor-gallery > div > img {
+  border-radius: 8px;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/********* Media queries sabores ********/
+@media only screen and (max-width: 298px) {
+  .wrapper-flavors {
+    height: 118vh;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .logo {
+    background-position: center;
+    justify-self: center;
+  }
+}
+
+@media only screen and (min-width: 567px) {
+  .wrapper-flavors {
+    height: 73vmax;
+  }
+}
+
+@media only screen and (min-width: 716px) {
+  .header-flavors-text h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 763px) {
+  .wrapper-flavors {
+    height: 55vmax;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  .wrapper-flavors {
+    height: 46vmax;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .sorbet--lemon-flavor-gallery,
+  .sorbet--strawberry-flavor-gallery,
+  .ice-cream--chocolate-flavor-gallery,
+  .ice-cream--coconut-flavor-gallery,
+  .ice-cream--cafe-maca-flavor-gallery,
+  .ice-cream--cinnamon-flavor-gallery {
+    flex-direction: row;
+  }
+  .sorbet--lemon-flavor-gallery > div,
+  .sorbet--strawberry-flavor-gallery > div,
+  .ice-cream--chocolate-flavor-gallery > div,
+  .ice-cream--coconut-flavor-gallery > div,
+  .ice-cream--cafe-maca-flavor-gallery > div,
+  .ice-cream--cinnamon-flavor-gallery > div {
+    height: 408px;
+    padding-right: 20px;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1085px) {
+  .header-flavors-text h1 {
+    font-size: 4.5rem;
+  }
+}

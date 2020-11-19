@@ -1,0 +1,172 @@
+.wrapper-contacto {
+  background-image: radial-gradient(circle farthest-side, rgb(255 255 255 / 0%), #00000078), url(../img/bg-contacto.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  height: 104vh;
+}
+
+.grid-contacto {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 90%;
+}
+
+.logo {
+  background-image: url(../img/Biotrap-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+  justify-self: flex-start;
+  height: 80px;
+  width: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.header-contacto-text {
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.header-contacto-text h1 {
+  color: var(--color-bg);
+  margin-bottom: 20px;
+  font-family: "Biotrap", sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.header-contacto-text h2 {
+  color: var(--color-bg);
+  font-family: "Biotrap", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.header-contacto-text h3 {
+  color: var(--color-bg);
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.6em;
+}
+
+.header-contacto-text > header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Formulario página contacto */
+.form-contact > header {
+  margin: 14% auto 0;
+  width: 90%;
+}
+
+.form-contact > header > h3 {
+  color: inherit;
+  font-family: "Altair", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.contact-page {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  margin: 7% auto 0;
+  width: 90%;
+}
+
+.privacidad {
+  grid-column: 1 / 1;
+}
+
+.enviar {
+  margin-top: 20px;
+}
+
+/* Google Maps */
+.map {
+  margin-top: 7%;
+  width: 100%;
+}
+
+/********* Media queries CONTACTO ********/
+@media only screen and (max-width: 298px) {
+  .wrapper-contacto {
+    height: 118vh;
+  }
+}
+
+@media only screen and (max-width: 716px) {
+  .contact-page {
+    margin: 12% auto 0;
+  }
+}
+
+@media only screen and (max-width: 1270px) {
+  .map {
+    margin-top: 14%;
+  }
+}
+
+@media only screen and (min-width: 567px) {
+  .wrapper-contacto {
+    height: 73vmax;
+  }
+}
+
+@media only screen and (min-width: 716px) {
+  .header-contacto-text h1 {
+    font-size: 3.5rem;
+  }
+  .form-contact {
+    background-image: radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.75), #010101),
+      url(../img/bg-ice-cream-contact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -3%;
+  }
+  .header-contacto-text h3 {
+    align-self: center;
+    width: 70%;
+  }
+  .contact-page {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 60px;
+  }
+  .mensaje {
+    grid-column: 1 / -1;
+  }
+  .enviar {
+    grid-row: 5;
+    grid-column: 2 / -1;
+  }
+}
+
+@media only screen and (min-width: 763px) {
+  .wrapper-contacto {
+    height: 55vmax;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  .wrapper-contacto {
+    height: 46vmax;
+  }
+}
+
+@media only screen and (min-width: 1085px) {
+  .header-contacto-text h1 {
+    font-size: 4.5rem;
+  }
+  .contact-page,
+  .form-contact > header {
+    width: 70%;
+  }
+}

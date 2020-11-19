@@ -1,0 +1,253 @@
+.wrapper-certificados {
+  background-image: url(../img/bg-certificado.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  height: 55vmax;
+}
+
+.grid-certificados {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 90%;
+}
+
+.logo {
+  background-image: url(../img/Biotrap-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+  justify-self: flex-start;
+  height: 80px;
+  width: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.header-certificates-text {
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.header-certificates-text h1 {
+  margin-bottom: 20px;
+  font-family: "Biotrap", sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.header-certificates-text h2 {
+  color: var(--color-link);
+  font-family: "Biotrap", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.header-certificates-text h3 {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.6em;
+}
+
+.header-certificates-text > header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* meaning-certificates */
+.meaning-certificates {
+  padding: 40px 0;
+  background-image: url(../img/bolas-vainilla-fresa.png), url(../img/sorbete-frambuesa.png),
+    url(../img/PaperBlackBackground.jpg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 73%, 68%, cover;
+  background-position: -146% 38%, 200% 48%, left center;
+}
+
+.certificates-boxes {
+  background-color: rgba(29, 32, 39, 0.47);
+  border-radius: 8px;
+  /* display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto; */
+  margin: 0 auto;
+  width: 90%;
+}
+
+.meaning-certificates > .certificates-boxes:first-child {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.meaning-certificates > .certificates-boxes:last-child {
+  background-color: transparent;
+  border: none;
+}
+
+.certificate-logo {
+  /*display: flex;*/
+  height: 100px;
+  padding: 10px 0;
+}
+
+.box-two > .certificate-logo {
+  display: flex;
+}
+
+.certificate-logo img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.box-two > .certificate-logo img {
+  width: 50%;
+}
+
+.certificate-content {
+  color: var(--color-text);
+  padding: 20px 10px;
+}
+
+.certificate-content strong {
+  color: var(--color-title-header);
+}
+
+.box-four {
+  margin-top: 40px;
+}
+
+.images--box-four {
+  background-image: url(../img/PaperBackground.jpg);
+  background-size: 15%;
+  border-radius: 8px;
+  color: #006ebc;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.image-four-1 img,
+.image-four-2 img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/*Media queries*/
+@media only screen and (min-width: 575px) {
+  .images--box-four {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .image-four-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+  .image-four-2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 699px) {
+  .grid-certificados {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: 100px 250px;
+  }
+  .header-certificates-text {
+    align-self: center;
+    grid-column: 2 / -1;
+    grid-row: 2 / span 1;
+    justify-self: self-end;
+  }
+  .header-certificates-text > header {
+    align-items: flex-end;
+  }
+  .header-certificates-text h1 {
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: 716px) {
+  .header-certificates-text h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 740px) {
+  .box-one,
+  .box-two,
+  .box-three {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-column-gap: 10px;
+  }
+  .box-one,
+  .box-two {
+    border-bottom: 1px solid var(--color-info);
+  }
+  .certificate-logo {
+    align-self: center;
+    grid-column: 1 / span 1;
+  }
+  .certificate-content {
+    grid-column: 2 / -1;
+    border-left: 1px solid var(--color-info);
+  }
+  .box-one .certificate-logo > img {
+    padding-left: 10px;
+  }
+  .certificates-boxes {
+    border: 1px solid var(--color-info);
+  }
+  .meaning-certificates > .certificates-boxes:first-child {
+    padding-top: 0;
+  }
+}
+
+@media only screen and (min-width: 803px) {
+  .box-four {
+    margin: 40px auto 0;
+    /* width: 50%; */
+  }
+}
+
+@media only screen and (min-width: 834px) {
+  .header-certificates-text {
+    grid-column: 3 / -1;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .certificates-boxes {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  .grid-certificados {
+    grid-template-rows: 100px 440px;
+  }
+}
+
+@media only screen and (min-width: 1104px) {
+  .meaning-certificates {
+    padding: 60px 0 80px;
+  }
+}
+
+@media only screen and (min-width: 1085px) {
+  .header-certificates-text h1 {
+    font-size: 4.5rem;
+  }
+}

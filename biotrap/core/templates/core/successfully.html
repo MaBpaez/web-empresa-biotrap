@@ -1,0 +1,39 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Formulario enviado | Helados y Sorbetes Biotrap{% endblock title %}
+{% block description%}{% endblock description %}
+
+<!--
+  Metadatos para Twitter
+-->
+{% block twitterimage %}/static/core/img/natural-strawberry.jpg{% endblock twitterimage %}
+{% block twittertitle %}Formulario enviado | Helados y Sorbetes Biotrap{%endblock twittertitle %}
+{% block twitterdescription %}{% endblock twitterdescription %}
+
+{% block preload %}<!-- Preload css -->
+  <link rel="preload" as="style" href="{% static 'core/css/successfully.css' %}" />{% endblock preload %}
+
+{% block css %}<!-- Estilos css -->
+  <link rel="stylesheet" href="{% static 'core/css/successfully.css' %}" />{% endblock css %}
+
+
+{% block content %}
+  <div class="grid-contacto">
+    <!-- logo -->
+    <a href="{% url 'home' %}" class="logo"></a>
+
+    <!-- content-text -->
+    <div class="header-contacto-text">
+      <header>
+        <h1>
+          <span class="green-gradient-text">Formulario enviado con éxito</span>
+        </h1>
+        <h2>El formulario de contacto ha sido enviado</h2>
+        <p>Nos pondremos en contacto con usted en las próximas horas para responder a la información solicitada. Muchas gracias por contactar con Biotrap.</p>
+      </header>
+    </div>
+  </div>
+{% endblock content %}
+
+{% block scrollmagic %}<script src="{% static 'core/js/ScrollMagic.min.js' %}"></script>{% endblock scrollmagic %}

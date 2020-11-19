@@ -1,0 +1,998 @@
+/**** Medium Header Home ****/
+
+.medium-header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 80px);
+  padding-top: 20px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.medium-header-logo {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  background-image: url(../img/Biotrap-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+  height: 80px;
+  width: 100px;
+}
+
+.medium-header-title {
+  align-self: center;
+  grid-column: 4 / span 9;
+  grid-row: 1 / span 1;
+  justify-self: center;
+}
+
+.medium-header-title h1 {
+  color: var(--color-title-header);
+  font-family: "Biotrap", sans-serif;
+  font-size: 2.9rem;
+  text-transform: uppercase;
+}
+
+.medium-header-image {
+  background-image: radial-gradient(ellipse, rgba(1, 0, 9, 0.3), #000), url(../img/header06-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  grid-column: 1 / span 12;
+  grid-row: 4 / span 5;
+  margin-top: 20px;
+  position: relative;
+  z-index: -1;
+}
+
+.biotrap-font {
+  color: var(--color-title-header);
+}
+
+.medium-header-content > div {
+  display: flex;
+  flex-direction: column;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.medium-header-content > div p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.medium-header-content > div p:nth-child(3) span {
+  color: var(--color-title-header);
+}
+
+.medium-header-content {
+  grid-column: 1 / -1;
+  grid-row: 3 / span 9;
+}
+
+.medium-header-content h2 {
+  color: var(--color-link);
+  font-family: "Biotrap", sans-serif;
+  font-size: 2.3rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.medium-header-content > div > a {
+  align-self: center;
+}
+
+.medium-header-content > div button {
+  margin-top: 40px;
+}
+
+.medium-header-certificates {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  grid-column: 1 / -1;
+  grid-row: 12 / -1;
+}
+
+.medium-header-certificates > div {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 100%;
+}
+
+.ifs {
+  background-image: url(../img/ifs.svg);
+  margin-right: 20px;
+  width: 100%;
+}
+
+.caae {
+  background-image: url(../img/caae.jpg);
+  margin-right: 20px;
+  width: 100%;
+}
+
+.lactosa-free {
+  background-image: url(../img/lactose-free-b.svg);
+  margin-right: 20px;
+  width: 64%;
+}
+
+.gluten-free {
+  background-image: url(../img/gluten-free-bb.svg);
+  margin-right: 20px;
+  width: 64%;
+}
+
+.vegano {
+  background-image: url(../img/vegano.svg);
+  background-position: center bottom;
+  width: 64%
+}
+
+/**** Presentación ****/
+
+.wrapper-presentation {
+  margin-top: 6%;
+}
+
+.wrapper-presentation,
+.wrapper-benefits {
+  margin: 30px auto;
+  width: 90%;
+}
+
+.top-presentation {
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: 30px;
+  margin-bottom: 30px;
+}
+
+.bio-quote {
+  font-size: 1.2rem;
+}
+
+.medium-presentation {
+  margin-top: 50px;
+}
+
+.title-contact-medium-presentation {
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.title-contact-medium-presentation h2 {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.medium-presentation-content > p {
+  line-height: 1.5;
+}
+
+.medium-presentation-content > p:first-child {
+  margin-bottom: 10px;
+}
+
+.form-contact-medium-presentation {
+  margin-top: 50px;
+}
+
+.contact-presentation label {
+  color: var(--color-quote);
+  display: block;
+}
+
+.contact-presentation .privacidad label {
+  display: inline;
+}
+
+.contact-presentation .enviar {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.contact-presentation .enviar .button-info:hover input[type="submit"] {
+  color: var(--color-bg);
+}
+
+/**** Parallax ****/
+
+/*
+.parallax-image {
+  background-image: url(../img/biotrap/sabores/IMG-20200520-WA0013.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}*/
+
+.parallax-biotrap {
+  background-image: url(../img/biotrap/sabores/IMG-20200520-WA0013.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+  height: 300px;
+}
+
+/**** Beneficios ****/
+
+.benefits {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.benefits > header > h2 {
+  margin: 20px 0 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.benefits-list > ul > li {
+  color: var(--color-link);
+  position: relative;
+  padding-left: 15px;
+}
+
+.benefits-list > ul > li::before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(to bottom, #b0da19, #b0da19, #6dc72e, #40b93c, #1d6434, #1d6434, #1d6434);
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  height: 5px;
+  width: 5px;
+}
+
+.benefits-list > ul > li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.benefits-image {
+  background-image: url("../img/helado-artesanal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 14px;
+  margin-top: 25px;
+  height: 300px;
+  width: 100%;
+}
+
+/*** Categorías Sorbetes y Helados ***/
+
+.wrapper-sorbets-creams {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.wrapper-sorbets-creams hr {
+  color: var(--color-quote);
+  margin: 5px 0 40px;
+}
+
+.sorbets h2,
+.ice-creams h2 {
+  color: var(--color-link);
+  text-transform: uppercase;
+}
+
+.ice-creams {
+  margin-top: 40px;
+}
+
+.sorbets-image,
+.ice-creams-image {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.sorbets-image img,
+.ice-creams-image img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.sorbets-image div,
+.ice-creams-image div {
+  margin-bottom: 26px;
+}
+
+.lemon-sorbet,
+.strawberry-sorbet,
+.chocolate-cream,
+.coconut-cream,
+.cinnamon-cream,
+.coffee-cream {
+  flex: 0 0 22%;
+  max-width: 90%;
+  cursor: pointer;
+  position: relative;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.lemon-sorbet span,
+.strawberry-sorbet span,
+.chocolate-cream span,
+.coconut-cream span,
+.coffee-cream span,
+.cinnamon-cream span {
+  font-family: 'Biotrap', sans-serif;
+  font-size: 2rem;
+  color: var(--color-bg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+/**** Galería de helados y sorbetes ****/
+
+.wrapper-ice-cream {
+  margin: 100px auto 60px;
+  width: 90%;
+}
+
+.ice-cream-gallery {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 260px 200px;
+  grid-auto-flow: dense;
+}
+
+.item-ice-cream-gallery {
+  position: relative;
+}
+
+.item-ice-cream-gallery > .flavor-name {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0 0 8px 8px;
+  color: var(--color-link);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  left: 0;
+  right: 0;
+}
+
+.flavor-name > header > h3 {
+  font-family: "Biotrap", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.item-ice-cream-gallery > img {
+  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/**** Reseñas de clientes ****/
+
+.wrapper-reviews {
+  margin: 100px auto 60px;
+  width: 90%;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.item-review {
+  background-color: var(--color-bg-item4);
+  border: 1px solid var(--color-link);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.item-review:last-child .avatar-img {
+  background-image: url(../img/avatar.png);
+  background-color: var(--color-link);
+}
+
+.avatar {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-img {
+  background-image: url(../img/avatar01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+
+.avatar p {
+  margin-top: 10px;
+}
+
+.avatar img {
+  background-color: var(--color-title-header);
+  border-radius: 50%;
+  height: 69px;
+  object-fit: cover;
+  width: 20%;
+}
+
+.content-customer {
+  margin-top: 50px;
+  position: relative;
+}
+
+.content-customer::before {
+  background-image: url(../img/quote-right.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  content: " ";
+  top: -25px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+}
+
+.content-customer p {
+  padding-top: 20px;
+  text-align: center;
+}
+
+/**** Garantías y Certificados ****/
+.wrapper-certificates {
+  margin: 90px auto;
+  width: 90%;
+}
+
+.guarantee {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 185px));
+  grid-auto-rows: 100px;
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.item-guarantee {
+  background-color: var(--color-bg-item4);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.item-guarantee > img {
+  height: 100%;
+  object-fit: fill;
+  width: 100%;
+}
+
+.garantee-info {
+  margin: 60px auto 0;
+  width: 90%;
+  text-align: center;
+}
+
+/**** Media Queries del Home ****/
+
+@media only screen and (max-width: 374px) {
+  .medium-header-certificates {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .medium-header {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+  }
+
+  .medium-header-logo {
+    background-position: center;
+    grid-column: auto;
+    grid-row: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .medium-header-image {
+    grid-column: auto;
+    grid-row: auto;
+    margin-top: 20px;
+  }
+
+  .medium-header-title {
+    grid-column: auto;
+    grid-row: auto;
+    margin: 0 0 20px;
+  }
+
+  .medium-header-content {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .medium-header-content h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .medium-header-title h1 {
+    text-align: center;
+  }
+
+  .medium-header-certificates {
+    align-items: flex-end;
+    flex-wrap: wrap;
+    grid-column: auto;
+    grid-row: auto;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+
+  .medium-header-certificates > div {
+    background-position: center;
+    width: 100px;
+    height: 70px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .item-ice-cream-gallery:first-child {
+    grid-area: 1 / 1 / span 2 / span 2;
+  }
+
+  .item-ice-cream-gallery:nth-child(3n) {
+    grid-column: span 2;
+  }
+
+  .item-ice-cream-gallery:nth-child(2n) {
+    grid-row: span 2;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .medium-header {
+    grid-template-rows: repeat(11, 80px);
+  }
+
+  .medium-header-logo {
+    background-position: left center;
+  }
+
+  .medium-header-title {
+    grid-row: 1 / span 1;
+    grid-column: 4 / -1;
+  }
+
+  .medium-header-title h1 {
+    font-size: 2.9rem;
+  }
+
+  .medium-header-content {
+    grid-row: 2 / span 9;
+    grid-column: 1 / -1;
+  }
+
+  .medium-header-content h2 {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+
+  .medium-header-certificates {
+    grid-row: 11 / -1;
+    grid-column: 1 / -1;
+  }
+
+  .medium-header-certificates > div {
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 528px) {
+  .medium-header-content h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .medium-header {
+    grid-template-rows: repeat(10, 80px);
+  }
+
+  .medium-header-image {
+    grid-row: 4 / span 5;
+  }
+
+  .medium-header-content {
+    grid-row: 2 / span 8;
+  }
+
+  .medium-header-certificates {
+    grid-row: 10 / -1;
+  }
+
+  .sorbets-image,
+  .ice-creams-image {
+    flex-direction: row;
+  }
+
+  .lemon-sorbet,
+  .strawberry-sorbet,
+  .chocolate-cream,
+  .coconut-cream,
+  .cinnamon-cream,
+  .coffee-cream {
+    flex: 0 0 44%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .top-presentation {
+    grid-template-columns: 150px 1fr;
+    width: 89%;
+    margin: 0 auto 30px;
+    grid-template-rows: 120px;
+  }
+
+  .bio-quote {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    position: relative;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 716px) {
+  .medium-header-content > div {
+    margin-top: 20px;
+  }
+
+  .medium-header-title h1,
+  .headline > header > h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 730px) {
+  .contact-presentation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contact-presentation > div {
+    width: 47%;
+  }
+
+  .contact-presentation > div.mensaje,
+  .contact-presentation > div.enviar {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .bio-quote {
+    font-size: 1.5rem;
+  }
+
+  .bio-quote > p::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -14px;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--color-title-header);
+  }
+
+  .wrapper-presentation {
+    margin: 10% auto 6%;
+  }
+
+  .parallax-biotrap {
+    height: 550px;
+  }
+}
+
+@media only screen and (min-width: 846px) {
+  .medium-header-logo {
+    background-size: contain;
+  }
+
+  .medium-header-image {
+    background-size: contain;
+  }
+}
+
+@media only screen and (min-width: 862px) {
+  .medium-header {
+    grid-template-rows: repeat(10, 80px);
+  }
+
+  .medium-header-content {
+    grid-column: 1 / -1;
+    grid-row: 2 / span 8;
+  }
+
+  .medium-header-certificates {
+    grid-column: 1 / -1;
+    grid-row: 10 / -1;
+  }
+
+  .medium-header-certificates > div {
+    height: 100%;
+  }
+
+  .medium-header-content > div {
+    margin-top: 42px;
+  }
+
+  .medium-header-title {
+    justify-self: flex-start;
+  }
+}
+
+@media only screen and (min-width: 890px) {
+
+  .medium-header-image {
+    grid-column: 1 / -1;
+    grid-row: 3 / span 5;
+    background-size: cover;
+  }
+
+  .medium-header-certificates {
+    align-items: flex-end;
+  }
+}
+
+@media only screen and (min-width: 910px) {
+  .medium-header-image {
+    background-position: center;
+  }
+}
+
+@media only screen and (min-width: 930px) {
+  .medium-presentation {
+    margin-top: 75px;
+  }
+
+  .benefits > header > h2 {
+    margin: 4px 0 36px;
+  }
+}
+
+@media only screen and (min-width: 984px) {
+  .bio-quote > p::before {
+    top: 12px;
+    bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .medium-presentation {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-flow: row;
+    width: 100%;
+  }
+
+  .title-contact-medium-presentation {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    margin-top: 30px;
+  }
+
+  .medium-presentation-content {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 3;
+  }
+
+  .form-contact-medium-presentation {
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 4;
+  }
+
+  .bg-image {
+    display: grid;
+    grid-column: 2 / auto;
+    grid-row: 1 / span 8;
+    grid-template-columns: 1fr;
+  }
+
+  .mango {
+    background-image: url(../img/mango.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+    height: 240px;
+    grid-row: 3 / span 2;
+    grid-column: 1 / span 1;
+    position: relative;
+  }
+
+  .mango:before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/drop.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    z-index: 1;
+  }
+
+  .mango::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    bottom: -61px;
+    left: 66px;
+    right: 0;
+    background-image: url(../img/hojas-mint-3.png);
+    background-repeat: no-repeat;
+    background-size: 48%;
+    background-position: center bottom;
+  }
+
+  .grape {
+    background-image: url(../img/grape.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 240px;
+    grid-row: 3 / span 2;
+    grid-column: 1 / span 1;
+    width: 174px;
+    position: relative;
+    top: 17%;
+    left: 10%;
+  }
+
+  /*Beneficios*/
+  .benefits {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding-top: 70px;
+  }
+
+  .benefits-title {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    align-self: center;
+  }
+
+  .benefits-list {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    align-self: center;
+  }
+
+  .benefits-image {
+    grid-row: 1 / span 3;
+    height: auto;
+    margin: 0;
+    width: 92%;
+  }
+
+  /** Sorbetes y Helados **/
+  .lemon-sorbet,
+  .strawberry-sorbet,
+  .chocolate-cream,
+  .coconut-cream,
+  .cinnamon-cream,
+  .coffee-cream {
+    flex: 0 0 21%;
+    max-width: 21%;
+  }
+}
+
+@media only screen and (min-width: 1006px) {
+  .medium-header {
+    grid-template-rows: repeat(9, 80px);
+  }
+
+  .medium-header-image {
+    background-size: contain;
+  }
+
+  .medium-header-certificates {
+    grid-row: 9 / -1;
+  }
+
+  .wrapper-presentation {
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (min-width: 1085px) {
+  .medium-header-title {
+    justify-self: center;
+  }
+
+  .medium-header-title h1 {
+    font-size: 4.5rem;
+  }
+
+  .medium-header-content > div > a {
+    align-self: flex-start;
+  }
+
+  .medium-header-content h2 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1095px) {
+  .medium-header-content {
+    grid-column: 1 / span 8;
+  }
+
+  .medium-header-image {
+    grid-column: 6 / -1;
+  }
+
+  .medium-header-content > div > a {
+    align-self: center;
+  }
+
+  .medium-header-certificates {
+    grid-column: 7 / span 6;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  .medium-header-title {
+    grid-column: 4 / span 6;
+  }
+}
+
+@media only screen and (min-width: 1260px) {
+  .wrapper-presentation {
+    margin-top: 4%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .medium-header-content {
+    grid-column: 1 / span 7;
+  }
+
+  .medium-header-image {
+    background-size: cover;
+    grid-column: 7 / span 6;
+  }
+
+  .medium-header-certificates {
+    grid-row: 8 / -1;
+  }
+}

@@ -1,0 +1,126 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Contacto | Helados y Sorbetes Biotrap{% endblock title %}
+{% block description%}{% endblock description %}
+
+<!--
+  Metadatos para Twitter
+-->
+{% block twitterimage %}/static/core/img/bg-contacto.png{% endblock twitterimage %}
+{% block twittertitle %}Contacto | Helados y Sorbetes Biotrap{%endblock twittertitle %}
+{% block twitterdescription %}{% endblock twitterdescription %}
+
+{% block preload %}<!-- Preload css -->
+  <link rel="preload" as="style" href="{% static 'core/css/contacto.css' %}" />{% endblock preload %}
+
+{% block css %}<!-- Estilos css -->
+  <link rel="stylesheet" href="{% static 'core/css/contacto.css' %}" />{% endblock css %}
+
+{% block tipografias %}
+<!-- Tipografía manual -->
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+{% endblock tipografias %}
+
+{% block content %}
+    <!-- Wrapper Header Contacto -->
+    <div class="wrapper-contacto">
+      <div class="grid-contacto">
+        <!-- logo -->
+        <a href="{% url 'home' %}" class="logo"></a>
+        <!-- content-text -->
+        <div class="header-contacto-text">
+          <header>
+            <h1 class="anim1">Contacto</h1>
+            <h2 class="anim1">Nos encantaría saber de ti</h2>
+            <h3 class="anim1">
+              Háganos saber lo que le gusta, lo que no, cómo lo estamos haciendo y qué le gustaría ver más.
+            </h3>
+          </header>
+        </div>
+      </div>
+    </div>{% endblock content %}
+
+{% block main %}
+    <!-- Formulario de contacto Biotrap -->
+    <div class="form-contact">
+      <header>
+        <h3>
+          Nos encantaría escuchar sus comentarios; sin embargo, comprenda que no podemos aceptar sugerencias
+          de nuevos productos, publicidad, promociones, etc., de ninguna persona ajena a nuestra empresa.
+          Esto es necesario para evitar malentendidos sobre el origen de las ideas.
+        </h3>
+      </header>
+
+      <!-- Formulari contacto -->
+      <form action="" method="POST" class="contact-page">
+        {% csrf_token %}
+        <div class="name">
+          {{ form.nombre.errors }}
+          <label for="{{ form.nombre.id_for_label }}">Nombre</label>
+          {{ form.nombre }}
+          <!--<input type="text" id="fname" />-->
+        </div>
+
+        <div class="phone">
+          {{ form.telefono.errors }}
+          <label for="{{ form.telefono.id_for_label }}">Teléfono</label>
+          {{ form.telefono }}
+          <!--<input type="tel" id="fphone" />-->
+        </div>
+
+        <div class="email">
+          {{ form.correo.errors }}
+          <label for="{{ form.correos.id_for_label }}">Email</label>
+          {{ form.correo }}
+          <!--<input type="email" id="femail" />-->
+        </div>
+
+        <div class="asunto">
+          {{ form.asunto.errors }}
+          <label for="{{ form.asunto.id_for_label }}">Asunto</label>
+          {{ form.asunto }}
+          <!--<input type="text" id="fasunto" />-->
+        </div>
+
+        <div class="mensaje">
+          {{ form.mensaje.errors }}
+          <label for="{{ form.mensaje.id_for_label }}">Mensaje</label>
+          {{ form.mensaje }}
+          <!--<textarea id="fmensaje" rows="3"></textarea>-->
+        </div>
+
+        {% load pages_extras %}
+        {% get_page_privacy as page %}
+        <div class="privacidad">
+          {{ form.politica.erros }}
+          {{ form.politica }}
+          <label for="{{ form.politica.id_for_label }}">
+            <a href="{% url 'pagina:page' page.id page.title|slugify %}">Aceptar política privacidad</a>
+          </label>
+        </div>
+
+        <div class="enviar">
+          <button class="button-info"><input type="submit" value="Enviar" /></button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Mapa de Biotrap en Google Maps -->
+    <iframe
+      class="map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.475462446011!2d-4.127783684709935!3d36.80712497994719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd724130ac7ab779%3A0xce8cbb53f54302d7!2sBiotrap!5e0!3m2!1ses!2ses!4v1588355618927!5m2!1ses!2ses"
+      width="800"
+      height="600"
+      frameborder="0"
+      style="border: 0;"
+      allowfullscreen=""
+      aria-hidden="false"
+      tabindex="0"
+    ></iframe>
+
+{% endblock main %}
+
+
+{% block scrollmagic %}<script src="{% static 'core/js/ScrollMagic.min.js' %}"></script>{% endblock scrollmagic %}
+{% block animation %}<script src="{% static 'core/js/contact/contact.js' %}"></script>{% endblock animation %}

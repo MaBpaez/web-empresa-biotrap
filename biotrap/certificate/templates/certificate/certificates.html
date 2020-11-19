@@ -1,0 +1,127 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Certificados | Helados y Sorbetes Biotrap{% endblock title %}
+{% block description%}{% endblock description %}
+
+<!--
+  Metadatos para Twitter
+-->
+{% block twitterimage %}/static/core/img/caae.jpg{% endblock twitterimage %}
+{% block twittertitle %}Certificados |Helados y Sorbetes Biotrap{%endblock twittertitle %}
+{% block twitterdescription %}{% endblock twitterdescription %}
+
+{%block preload %}<!-- Preload css -->
+<link rel="preload" as="style" href="{% static 'core/css/certificados.css' %}" />{% endblock preload %}
+
+{% block css %}<!-- Estilos css -->
+<link rel="stylesheet" href="{% static 'core/css/certificados.css' %}" />{% endblock css %}
+
+{% block main %}
+<!-- Wrapper Header Certificates -->
+<div class="wrapper-certificados">
+  <div class="grid-certificados">
+    <!-- logo -->
+    <a href="{% url 'home' %}" class="logo"></a>
+    <!-- content-text -->
+    <div class="header-certificates-text">
+      <header>
+        <h1 class="anim1"><span class="green-gradient-text">Garantias y certificados</span></h1>
+        <h2 class="anim1">El mejor helado</h2>
+        <h3 class="anim1">Con el mejor sabor</h3>
+      </header>
+    </div>
+  </div>
+</div>
+
+<!-- Certificados significado -->
+<section class="meaning-certificates">
+  <div class="certificates-boxes">
+    <div class="box-one">
+      <div class="certificate-logo">
+        <img src="{% static 'core/img/caae.jpg' %}" alt="Biotrap certificado CAAE" />
+      </div>
+      <div class="certificate-content">
+        <p>
+          <strong>Producto ecológico certificado por CAAE:</strong> Es la entidad de certificación especializada en
+          Producción ecológica que más hectáreas certifica en Europa. Pioneros en la certificación de producción ecológica
+          y en la creación de normas para el desarrollo del sector agrario, en base al respeto de ciclos naturales,
+          mantenimiento de la biodiversidad, obteniendo productos agrarios sin el empleo de productos químicos de síntesis
+          ni OGM (Organismos Modificados Genéticamente).
+        </p>
+      </div>
+    </div>
+
+    <div class="box-two">
+      <div class="certificate-logo">
+        <img src="{% static 'core/img/gluten-free.svg' %}" alt="Biotrap certificado libre de gluten" />
+        <img src="{% static 'core/img/lactose-free.svg' %}" alt="Biotrap certificado sin lactosa" />
+      </div>
+      <div class="certificate-content">
+        <p>
+          <strong>SIN GLUTEN:</strong> Niveles inferiores a 20 ppm en producto final, cumpliendo con el Reglamento
+          1169/2011. Avalado por análisis de control en laboratorio acreditado en norma UNE 17025.
+        </p>
+        <p>
+          <strong>SIN LACTOSA:</strong> Lactosa &lt;0,01g/100g de producto, cumpliendo con niveles acordados por
+          AECOSAN para el uso de dicho término “sin lactosa” (Agencia Española de Consumo, Seguridad Alimentaria y
+          Nutrición).
+        </p>
+      </div>
+    </div>
+
+
+    <div class="box-one">
+      <div class="certificate-logo">
+        <img src="{% static 'core/img/vegano.svg' %}" alt="Biotrap certificado vegano" />
+      </div>
+      <div class="certificate-content">
+        <p>
+          <strong>La V-Label</strong> es un símbolo reconocido internacionalmente para el etiquetado de productos
+          veganos y vegetarianos. Nuestros helados y sorbetes 100% vegetales certificados.
+        </p>
+      </div>
+    </div>
+
+    <div class="box-three">
+      <div class="certificate-logo">
+        <img src="{% static 'core/img/ifs.svg' %}" alt="Biotrap certificado protocolo IFS Food" />
+      </div>
+      <div class="certificate-content">
+        <p>
+          <strong>Producto certificado por IFS FOOD:</strong> BIOTRAP es consciente de que los mercados, tanto
+          nacionales como internacionales, son cada vez más estrictos, y que las regulaciones sanitarias exigen a los
+          productores y exportadores mayores niveles de calidad higiénico sanitaria de las instalaciones, procesos y
+          productos. Por todo ello la empresa se ha certificado en un Sistema de Gestión de Calidad y Seguridad
+          Alimentaria basado en el protocolo IFS FOOD.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="certificates-boxes">
+    <p>
+      Todas estas certificaciones, unidas al altísimo nivel de calidad y excelencia ofrecido en sus productos, además
+      de la continua evaluación de las necesidades y expectativas de los clientes, así como la gran cantidad de intolerancias
+      alimentarias presentes en la sociedad actual, le ha permitido a
+      <strong class="green-gradient-text">BIOTRAP</strong> la apertura a grandes mercados.
+    </p>
+    <div class="box-four">
+      <div class="images--box-four">
+        <div class="image-four-1">
+          <img src="{% static 'core/img/diputacion-malaga.png' %}" alt="certificado diputación de Málaga" />
+        </div>
+        <div class="image-four-2">
+          <p>
+            <strong>“Sabor a Málaga”</strong> es una marca promocional que pertenece a la Diputación Provincial de Málaga,
+            lanzadera para mostrar el valor del sector agroalimentario de calidad de la provincia. La marca contribuye a la
+            dinamización de la economía local y a la creación de puestos de trabajo en el sector agroalimentario de Málaga.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>{% endblock main %}
+
+{% block scrollmagic %}<script src="{% static 'core/js/ScrollMagic.min.js' %}"></script>{% endblock scrollmagic %}
+{% block animation %}<script src="{% static 'core/js/certificate/certificate.js' %}"></script>{% endblock animation %}

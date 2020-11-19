@@ -1,0 +1,45 @@
+.grid-contacto {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 90%;
+}
+.logo {
+  background-image: url(../img/Biotrap-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+  justify-self: flex-start;
+  height: 80px;
+  width: 100px;
+  margin-bottom: 1.5rem;
+}
+.header-contacto-text {
+  grid-column: auto;
+  grid-row: auto;
+  width: 90%;
+}
+
+.header-contacto-text h1 {
+  font-family: "Biotrap", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+.header-contacto-text h2 {
+  color: var(--color-link);
+  font-family: "Patrick Hand", cursive;
+  margin-top: 10px;
+  text-align: center;
+}
+.header-contacto-text p:nth-child(3) {
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 822px) {
+  .header-contacto-text {
+    width: 70%;
+  }
+}

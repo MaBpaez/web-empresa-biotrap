@@ -1,0 +1,121 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Empresa | Helados y Sorbetes Biotrap{% endblock title %}
+{% block description%}{% endblock description %}
+
+<!--
+  Metadatos para Twitter
+-->
+{% block twitterimage %}/static/core/img/caae.jpg{% endblock twitterimage %}
+{% block twittertitle %}Empresa |Helados y Sorbetes Biotrap{%endblock twittertitle %}
+{% block twitterdescription %}{% endblock twitterdescription %}
+
+{% block tipografias %}
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />{% endblock tipografias %}
+
+{%block preload %}<!-- Preload css -->
+<link rel="preload" as="style" href="{% static 'core/css/empresa.css' %}" />{% endblock preload %}
+
+{% block css %}<!-- Estilos css -->
+<link rel="stylesheet" href="{% static 'core/css/empresa.css' %}" />{% endblock css %}
+
+{% block content %}
+<!-- Wrapper Header La Empresa -->
+<div class="wrapper-empresa">
+  <div class="grid-empresa">
+    <!-- logo -->
+    <a href="{% url 'home' %}" class="logo"></a>
+    <!-- content-text -->
+    <div class="header-empresa-text">
+      <header>
+        <h1 class="anim1"><span class="green-gradient-text">Sobre Biotrap</span></h1>
+        <h2 class="anim1">Nuestra selecta fábrica</h2>
+        <h3 class="anim1">Lo que importa es el interior</h3>
+      </header>
+    </div>
+  </div>
+</div>{% endblock content %}
+
+{% block main %}
+<!-- Content -->
+<section class="wrapper-contenido-empresa">
+  <div class="contenido-empresa-image-one"></div>
+  <div class="contenido-empresa-image-two"></div>
+
+  <div class="contenido-empresa">
+    <p>
+     Enclavada en la Axarquía malagueña, nuestra fábrica y nuestro equipo humano trabaja  para ofrecer un exquisito
+     producto y la mejor calidad.
+    </p>
+
+    <p>
+     <span class="tab">El</span> modelo de negocio de
+     <span class="green-gradient-text no-shadow biotrap-font">BIOTRAP</span> siempre ha tenido como base fabricar sus
+     productos adecuados a estándares de máxima calidad, alimentación saludable al mejor precio, incluyendo en su
+     política de empresa la compra a productores locales de frutas ecológicas.
+    </p>
+
+    <p>
+      <span class="tab">Su</span> cercanía hacia las zonas de recolección hace que pueda contar con la frescura y punto
+      de maduración óptimo de la fruta empleada en sus fabricaciones, ofreciendo al cliente una diferenciación frente a
+      sus competidores, y a la vez generando un mayor ingreso por ventas al sector agrícola local que en la mayoría de los
+      casos da por pérdidas aquellos frutos ya maduros. Este hecho hace que en el envase de la firma BIOTRAP pueda lucir
+      el logotipo de la marca promocional <strong>“Sabor a Málaga”</strong>, creada y difundida por la Diputación
+      Provincial de Málaga.
+    </p>
+
+    <p>
+      <span class="tab">Elaboramos</span> un alimento <strong>100% natural</strong>, seleccionamos cuidadosamente los
+      ingredientes, no utilizamos conservantes ni colorantes en el proceso de fabricación,
+      <strong>totalmente artesano</strong>.
+    </p>
+
+    <p>
+      <span class="tab">Esta</span> combinación de parámetros convierte a nuestros helados artesanos en toda una
+      experiencia, un lujo para el paladar.
+    </p>
+  </div>
+</section>
+
+<!-- Team -->
+<article class="biotrap-team">
+  <div class="title-team">
+    <header>
+      <h1><span class="green-gradient-text">Biotrap</span></h1>
+    </header>
+  </div>
+</article>
+
+<div class="team-text">
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio distinctio nemo ducimus voluptatibus
+    reiciendis velit corporis, harum, nobis, magnam facilis tempora quo pariatur repellendus totam quod atque
+    porro assumenda excepturi.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio distinctio nemo ducimus voluptatibus
+    reiciendis velit corporis, harum, nobis, magnam facilis tempora quo pariatur repellendus totam quod atque
+    porro assumenda excepturi.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio distinctio nemo ducimus voluptatibus
+    reiciendis velit corporis, harum, nobis, magnam facilis tempora quo pariatur repellendus totam quod atque
+    porro assumenda excepturi.</p>
+</div>
+
+<!-- Enviroment -->
+<article class="biotrap-enviroment">
+  <div class="title-enviroment">
+    <header>
+      <h1><span class="green-gradient-text">Entorno</span></h1>
+    </header>
+  </div>
+</article>
+
+<div class="enviroment-text">
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio distinctio nemo ducimus voluptatibus reiciendis
+    velit corporis, harum, nobis, magnam facilis tempora quo pariatur repellendus totam quod atque porro assumenda excepturi.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio distinctio nemo ducimus voluptatibus reiciendis
+    velit corporis, harum, nobis, magnam facilis tempora quo pariatur repellendus totam quod atque porro assumenda excepturi.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio distinctio nemo ducimus voluptatibus reiciendis
+    velit corporis, harum, nobis, magnam facilis tempora quo pariatur repellendus totam quod atque porro assumenda excepturi.</p>
+</div>{% endblock main %}
+
+{% block scrollmagic %}<script src="{% static 'core/js/ScrollMagic.min.js' %}"></script>{% endblock scrollmagic %}
+{% block animation %}<script src="{% static 'core/js/about/about.js' %}"></script>{% endblock animation %}
