@@ -1,0 +1,5 @@
+Pillow==7.1.2
+django==2.2.12
+django-ckeditor==5.9.0
+django-taggit==1.2.0
+
